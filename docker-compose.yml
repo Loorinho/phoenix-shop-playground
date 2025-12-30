@@ -1,0 +1,17 @@
+services:
+    shop-database:
+      image: postgres:alpine
+      restart: always
+      environment: 
+        POSTGRES_USER: shop_user
+        POSTGRES_PASSWORD: shop_password
+        POSTGRES_DB: shop_dev
+
+      ports:
+        - '5432:5432'
+
+      volumes: 
+        - shop-db:/var/lib/posgressql
+
+volumes: 
+  shop-db:
