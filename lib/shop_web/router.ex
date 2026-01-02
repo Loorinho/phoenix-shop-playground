@@ -22,6 +22,8 @@ defmodule ShopWeb.Router do
     get "/products", ProductController, :index
 
     get "/products/:id", ProductController, :show
+
+    live "/budgets", BudgetListLive
   end
 
   # Other scopes may use custom stacks.
