@@ -18,5 +18,6 @@ defmodule Shop.Tracking do
 
   def list_budgets do
     Repo.all(Budget)
+    |> Repo.preload(:creator)
   end
 end

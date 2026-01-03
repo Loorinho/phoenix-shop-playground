@@ -15,5 +15,9 @@
     <:col :let={budget} label="End Date">
       {budget.end_date}
     </:col>
+
+    <:col :let={budget} label="Creator">
+      {budget.creator.first_name} {budget.creator.last_name}
+    </:col>
   </.table>
 </div>
